@@ -1,0 +1,29 @@
+html {
+    width: 100%;
+    align-content: center;
+    text-align: center;
+    background: grey;
+}
+
+#loginDiv {
+    margin-top: 8%;
+    align-content: center;
+    display: inline-block;
+    text-align: center;
+}
+
+h1 {
+    text-decoration: underline;
+}
+
+#tokenPar {
+    color: red;
+}
+
+#tokenPar2 {
+    color: red;
+}
+
+#mainTitle {
+    font-size: 40px;
+}

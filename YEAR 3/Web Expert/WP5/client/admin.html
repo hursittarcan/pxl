@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WP5 - Hursit Tarcan</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="loginDiv">
+    <h1 id="mainTitle">ADMIN PANEL</h1>
+    <h1>ADD NEW USER</h1>
+    <label for="usernameNewUser">Username: </label><input id="usernameNewUser">
+    <br><br>
+    <label for="passwordNewUser">Password: </label><input id="passwordNewUser" type="password">
+    <br><br>
+    <button onclick="addNewUser()">Add New User</button>
+    <br>
+    <p id="tokenPar"></p>
+</div>
+<br>
+<br>
+<div id="loginDiv2">
+    <h1>ADD NEW TASK</h1>
+    <label for="taskName">Task: </label><input id="taskName">
+    <br><br>
+    <button onclick="addTask()">Add New Task</button>
+    <br>
+    <p id="tokenPar2"></p>
+</div>
+<div id="loginDiv3">
+    <h1>EDIT TASK</h1>
+    <button onclick="getAllTodos()">Get All Tasks</button>
+    <br><br>
+    <div id="cboxes2"></div>
+    <br>
+    <button onclick="updateAllTodos()">Update All</button>
+    <p id="tokenPar3"></p>
+</div>
+</body>
+</html>

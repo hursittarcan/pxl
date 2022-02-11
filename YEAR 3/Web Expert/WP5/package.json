@@ -1,0 +1,34 @@
+{
+  "name": "wp5-hursittarcan",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webpxl/wp5-HursitTarcan.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/webpxl/wp5-HursitTarcan/issues"
+  },
+  "homepage": "https://github.com/webpxl/wp5-HursitTarcan#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.1",
+    "express": "^4.17.2",
+    "express-validator": "^6.14.0",
+    "mongoose": "^6.1.4",
+    "nodemon": "^2.0.15"
+  },
+  "devDependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "http-errors": "^2.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^4.2.2"
+  }
+}
