@@ -1,0 +1,16 @@
+extends base_template
+
+block header_injection
+    title Game Over
+
+block contents
+    h1 Game Over Page
+    h2 Regels:
+    ul
+        li(class='regels') Geweldig, de quiz is beeindigd!
+        li(class='regels') We hopen dat u het een leuke quiz vond.
+        li(class='regels') Bedankt voor het meespelen en tot de volgende quiz!
+        li(class='regels') Klik op de 'groene' knop om een nieuwe quiz te beginnen!
+        li(class='regels') Veel Plezier!
+    a(href="http://localhost:3000/")
+        button(type="button") Nieuwe quiz!

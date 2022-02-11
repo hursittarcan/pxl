@@ -1,0 +1,17 @@
+[
+  {
+    "question": "Wat is de hoofdstad van Engeland?",
+    "answers": ["London", "Londen", "Londres"],
+    "requiredAnswers": 1
+  },
+  {
+    "question": "Geef 2 voorbeelden van fasetoestanden.",
+    "answers": ["vast", "vloeibaar", "gas"],
+    "requiredAnswers": 2
+  },
+  {
+    "question": "Geef 3 voorbeelden van klinkers.",
+    "answers": ["a", "e", "i", "o", "u"],
+    "requiredAnswers": 3
+  }
+]

@@ -1,0 +1,15 @@
+extends base_template
+
+block header_injection
+    title Quiz
+
+block contents
+    h2 #{question}
+        br
+        form(action=url, method='POST', enctype="application/x-www-form-urlencoded")
+            -var values = requiredAnswer
+                    each val in values
+                        label= "Antwoord " + val + ": "
+                        input(type='text', name='inp' + val)
+                        br
+                    input(type='submit', value='OK', id='submitButton')

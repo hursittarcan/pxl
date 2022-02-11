@@ -1,0 +1,31 @@
+{
+  "name": "wp3-hursittarcan",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-validator": "^5.3.0",
+    "init": "^0.1.2",
+    "nodemon": "^2.0.15",
+    "pug": "^3.0.2"
+  },
+  "devDependencies": {
+    "cookie-parser": "^1.4.6",
+    "express-session": "^1.17.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webpxl/wp3-HursitTarcan.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/webpxl/wp3-HursitTarcan/issues"
+  },
+  "homepage": "https://github.com/webpxl/wp3-HursitTarcan#readme"
+}

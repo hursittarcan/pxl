@@ -1,0 +1,24 @@
+extends base_template
+
+block header_injection
+    title Results
+
+block contents
+    h1 Check pagina
+    h2 Uw antwoord(en):
+    h3 #{answer}
+    h3 #{answerTwo}
+    h3 #{answerThree}
+    br
+    h2 Alle mogelijke antwoorden:
+    h3(id='extra') #{extra}
+    br
+    h3(class='score') Score op deze vraag: #{score} / #{totaal}
+    h3(class='score') Total Score: #{totalScore} / #{totalScoreMax}
+    br
+    if lastQuestion
+        a(href="http://localhost:3000/gameOver/")
+            button(type="button") Quiz Beeindigen
+    else
+        a(href="http://localhost:3000/quiz/" + (prevId + 2))
+            button(type="button") Volgende vraag

@@ -1,0 +1,19 @@
+extends base_template
+
+block header_injection
+    title Home
+
+block contents
+    h1 Welcome bij deze Quiz!
+    h2 Regels:
+    ul
+        li(class='regels') U krijgt enkele algemene vragen over o.a geografie en taal.
+        li(class='regels') Beantwoord de vragen zo correct mogelijk. Let op schrijffout = fout!
+        li(class='regels') Elk invulveld dient ingevuld te worden! Bij openlaten kan u niet navigeren naar de volgende vraag!
+        li(class='regels') U krijgt een punt op elke vraag. Als de vraag niet 100% juist is krijgt u geen punten!
+        li(class='regels') Klik op de 'groene' knop om de quiz te beginnen!
+        li(class='regels') Veel Plezier!
+
+    a(href="http://localhost:3000/quiz/1")
+        button(type="button") Start Quiz!
+    h2 Uw laatste score was: #{cookies}

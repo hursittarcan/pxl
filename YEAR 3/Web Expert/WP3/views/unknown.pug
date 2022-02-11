@@ -1,0 +1,13 @@
+extends base_template
+
+block header_injection
+    title Unknown
+
+block contents
+    h1 Oeps, deze pagina bestaat niet!
+    ul
+        li(class='regels') Het lijkt erop dat u  op een pagina zit die wij niet/niet meer ondersteunen.
+        li(class='regels') Klik a.u.b. op de 'groene' knop onderaan om terug te navigeren naar het startscherm!
+
+    a(href="http://localhost:3000/")
+        button(type="button") Terug naar Quiz
