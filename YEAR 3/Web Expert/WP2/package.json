@@ -1,0 +1,26 @@
+{
+  "name": "wp2-hursittarcan",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "http-errors": "^1.8.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webpxl/wp2-HursitTarcan.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/webpxl/wp2-HursitTarcan/issues"
+  },
+  "homepage": "https://github.com/webpxl/wp2-HursitTarcan#readme"
+}

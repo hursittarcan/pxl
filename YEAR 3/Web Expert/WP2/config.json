@@ -1,0 +1,44 @@
+[
+  {
+    "route": "/person",
+    "fields": {
+      "name": "string",
+      "age": "number"
+    },
+    "validation": {
+      "name": "^[a-zA-Z ]+$",
+      "age": "^[0-9]+$"
+    },
+    "data": [
+      {
+        "id": 1,
+        "name": "tim",
+        "age": 10
+      },
+      {
+        "id": 2,
+        "name": "sofie",
+        "age": 7
+      }
+    ]
+  },
+  {
+    "route": "/pet",
+    "fields": {
+      "name": "string"
+    },
+    "validation": {
+      "name": "^[a-zA-Z ]+$"
+    },
+    "data": [
+      {
+        "id": 1,
+        "name": "bliksem"
+      },
+      {
+        "id": 2,
+        "name": "duvel"
+      }
+    ]
+  }
+]
