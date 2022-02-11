@@ -1,0 +1,58 @@
+html {
+    width: 100%;
+    background: darkgray;
+    text-align-all: center;
+    align-content: center;
+}
+
+#centerDiv {
+    margin-top: 16%;
+    text-align: center;
+    align-content: center;
+}
+
+button {
+    margin: 5px;
+}
+
+#centerDivLocation {
+    margin-top: 16%;
+    text-align: center;
+    align-content: center;
+}
+
+#locationTitle {
+    color: blue;
+}
+
+.red {
+    background: darkred;
+}
+
+.red:hover {
+    cursor: pointer;
+}
+
+.red2 {
+    background: red;
+}
+
+.red2:hover {
+    cursor: pointer;
+}
+
+.green {
+    background: green;
+}
+
+.green:hover {
+    cursor: pointer;
+}
+
+.green2 {
+    background: darkgreen;
+}
+
+.green2:hover {
+    cursor: pointer;
+}
