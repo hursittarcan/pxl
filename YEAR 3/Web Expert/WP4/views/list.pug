@@ -1,0 +1,38 @@
+extends base_template
+
+block header_injection
+    title #{title}
+
+block contents
+    h1 Welcome op de listpagina
+    h2 Hier kun je resultaten filteren op het aantal onvoldoendes:
+
+    h3 Beschikbare studenten:
+    ul
+        each val in courses
+            li= val.name + ": "
+            ol
+                -var onvoldoendes = 0
+                each values in val.courses
+                    if (values.score < 10)
+                        li(style='color: red')= values.title + " " + values.score
+                        - onvoldoendes= onvoldoendes + 1
+                    else
+                        li= values.title + " " + values.score
+                p(class="onvoldoendes")= val.name + " heeft in het totaal: " + onvoldoendes + " onvoldoende(s)."
+            br
+
+    form(action=url, method='POST', enctype="application/x-www-form-urlencoded")
+        input(type='text', name="toSearchInputList")
+        input(type='submit', value='OK', id='submitButton')
+
+    h2 Terug naar homepage:
+        a(href="http://localhost:3000/")
+            button(type="button") Terug naar home
+
+    div(class="pagination")
+        a(href="http://localhost:3000/") 1
+        a(href="http://localhost:3000/score" ) 2
+        a(href="http://localhost:3000/coursescore") 3
+        a(href="#" class="active") 4
+        a(href="http://localhost:3000/update") 5

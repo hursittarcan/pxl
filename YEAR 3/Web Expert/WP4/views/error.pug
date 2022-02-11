@@ -1,0 +1,15 @@
+extends base_template
+
+block header_injection
+    title Error
+
+block contents
+    h1 Oeps, zijn alle velden juist ingevuld?
+    h2 Dit zijn de fouten:
+    if errors
+        ul.errors
+        each error in errors
+            li #{error.msg}
+    br
+    a(href="http://localhost:3000/score")
+        button(type="button") Terug naar scores

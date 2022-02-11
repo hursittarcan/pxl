@@ -1,0 +1,12 @@
+extends base_template
+
+block header_injection
+    title #{title}
+
+block contents
+    h1 Welkom op de updatepagina
+    h2 #{title} Updated!
+
+    h2 Terug naar homepage:
+        a(href="http://localhost:3000/")
+            button(type="button") Terug naar home

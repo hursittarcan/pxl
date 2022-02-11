@@ -1,0 +1,30 @@
+extends base_template
+
+block header_injection
+    title #{title}
+
+block contents
+    h1 Welcome op de vakscore pagina
+    h2 Hier zie je de resultaten voor het vak:
+
+    h3 Beschikbare vakken:
+        ul
+            each val in list
+                if (val.courses.length > 1)
+                    each value in val.courses
+                        li= value.title
+
+    form(action=url, method='POST', enctype="application/x-www-form-urlencoded")
+        input(type='text', name="toSearchInputCourse")
+        input(type='submit', value='OK', id='submitButton')
+
+    h2 Terug naar homepage:
+        a(href="http://localhost:3000/")
+            button(type="button") Terug naar home
+
+    div(class="pagination")
+        a(href="http://localhost:3000/") 1
+        a(href="http://localhost:3000/score" ) 2
+        a(href="#" class="active") 3
+        a(href="http://localhost:3000/list") 4
+        a(href="http://localhost:3000/update") 5

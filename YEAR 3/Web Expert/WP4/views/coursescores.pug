@@ -1,0 +1,32 @@
+extends base_template
+
+block header_injection
+    title #{title}
+
+block contents
+    h1 Welcome op de vakscore pagina
+    h2 Hier zie je de resultaten van: #{title}
+
+    h3 Scores per vak van #{title}:
+    ul
+        each item in names.courses
+            if (item.score < 10)
+                li(style='color: red')= item.score + ": " + names.name + " (" + names.studentId + ")" + " | " + item.teacher
+            else
+                li= item.score + ": " + names.name + " (" + names.studentId + ")" + " | " + item.teacher
+
+    h3 Leerkrachten voor #{title}:
+        ul
+            each item in names.courses
+                li= item.teacher
+
+    h2 Terug naar scores:
+        a(href="http://localhost:3000/coursescore")
+            button(type="button") Terug naar scores
+
+    div(class="pagination")
+        a(href="http://localhost:3000/") 1
+        a(href="http://localhost:3000/score" ) 2
+        a(href="#" class="active") 3
+        a(href="http://localhost:3000/list") 4
+        a(href="http://localhost:3000/update") 5

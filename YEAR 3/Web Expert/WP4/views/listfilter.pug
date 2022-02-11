@@ -1,0 +1,51 @@
+extends base_template
+
+block header_injection
+    title #{title}
+
+block contents
+    h1 Welcome op de list pagina
+    h2 Het gekozen aantal onvoldoendes: #{maximumFail}
+
+    h3 Studenten met meer dan/gelijk aan het aantal onvoldoendes:
+
+    - var students = []
+    each val in courses
+        -var onvoldoendes = 0
+        each values in val.courses
+            if (values.score < 10)
+                - onvoldoendes= onvoldoendes + 1
+        if (onvoldoendes >= maximumFail)
+            - students.push(val.name)
+
+    //ul
+    //    - var students = []
+    //    each val in courses
+    //        //li= val.name + ": "
+    //        ol
+    //            -var onvoldoendes = 0
+    //            each values in val.courses
+    //                if (values.score < 10)
+    //                    //li(style='color: red')= values.title + " " + values.score
+    //                    - onvoldoendes= onvoldoendes + 1
+    //                //else
+    //                    //li= values.title + " " + values.score
+    //            //p(class="onvoldoendes")= val.name + " heeft in het totaal: " + onvoldoendes + " onvoldoende(s)."
+    //            if (onvoldoendes >= maximumFail)
+    //                - students.push(val.name)
+    //        br
+
+    ul
+        each val in students
+            li= val
+
+    h2 Terug naar scores:
+        a(href="http://localhost:3000/score")
+            button(type="button") Terug naar scores
+
+    div(class="pagination")
+        a(href="http://localhost:3000/") 1
+        a(href="http://localhost:3000/score" ) 2
+        a(href="http://localhost:3000/coursescore") 3
+        a(href="#" class="active") 4
+        a(href="http://localhost:3000/update") 5

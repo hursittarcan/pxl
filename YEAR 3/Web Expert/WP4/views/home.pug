@@ -1,0 +1,27 @@
+extends base_template
+
+block header_injection
+    title #{title}
+
+block contents
+    h1 Welcome op de homepagina
+
+    h2 Filteren op studentnaam:
+        a(href="http://localhost:3000/score")
+            button(type="button") Ga naar scores
+    h2 Filteren op vaknaam:
+        a(href="http://localhost:3000/coursescore")
+            button(type="button") Ga naar scores
+    h2 Filteren op onvoldoendes:
+        a(href="http://localhost:3000/list")
+            button(type="button") Ga naar scores
+    h2 Update:
+        a(href="http://localhost:3000/update")
+            button(type="button") Ga naar update
+
+    div(class="pagination")
+        a(href="#" class="active") 1
+        a(href="http://localhost:3000/score") 2
+        a(href="http://localhost:3000/coursescore") 3
+        a(href="http://localhost:3000/list") 4
+        a(href="http://localhost:3000/update") 5
