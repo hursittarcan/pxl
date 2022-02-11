@@ -1,0 +1,32 @@
+11:30:48.918 INFO  subscription accepted at 2021-10-15T09:30:48.918Z 
+11:31:12.082 INFO  subscription accepted at 2021-10-15T09:31:12.082Z 
+11:31:59.761 INFO  subscription accepted at 2021-10-15T09:31:59.760Z 
+11:32:16.426 INFO  subscription accepted at 2021-10-15T09:32:16.426Z 
+11:32:49.425 INFO  OUTGOING CALL TO URL: 2021-10-15T09:32:49.425Z 
+11:35:19.916 INFO  OUTGOING CALL TO URL: http://localhost:3000/Movies/ 
+11:35:41.494 INFO  OUTGOING CALL TO URL: http://localhost:3000/Movies/1 
+11:44:28.052 ERROR OUTGOING CALL TO URL: http://localhost:3000/Movies/ 
+11:48:16.744 INFO  OUTGOING CALL TO URL: http://localhost:3000/Movies/ 
+11:48:36.198 INFO  OUTGOING CALL TO URL: http://localhost:3000/Movies/1 
+11:48:57.782 INFO  OUTGOING CALL TO URL: http://localhost:3000/Movies/1 
+11:49:21.274 INFO  OUTGOING CALL TO URL: http://localhost:3000/Movies/1 
+11:50:12.765 INFO  OUTGOING CALL TO URL: http://localhost:3000/Movies/1 
+11:50:37.287 INFO  [46m[7mOUTGOING CALL TO URL:  http://localhost:3000/Movies/1[27m[49m 
+11:51:07.297 INFO  OUTGOING CALL TO URL: http://localhost:3000/Movies/ 
+11:52:02.742 INFO  OUTGOING CALL TO URL: http://localhost:3000/Movies/ 
+11:52:33.487 INFO  OUTGOING CALL TO URL: http://localhost:3000/Movies/1 
+11:52:55.689 INFO  OUTGOING CALL TO URL: http://localhost:3000/Movies/1 
+11:53:20.390 INFO  OUTGOING CALL TO URL: http://localhost:3000/Movies/1 
+11:54:23.052 INFO  OUTGOING CALL TO URL: http://localhost:3000/Movies/1 
+11:54:41.480 INFO  OUTGOING CALL TO URL: http://localhost:3000/Movies/3 
+11:54:48.101 INFO  OUTGOING CALL TO URL: http://localhost:3000/Movies/50 
+11:56:02.835 INFO  [34m[7mOUTGOING CALL TO URL: [27m[39m[34m[7mhttp://localhost:3000/Movies/3[27m[39m 
+11:56:32.253 INFO  OUTGOING CALL TO URL: http://localhost:3000/Movies/1 
+11:56:51.343 INFO  OUTGOING CALL TO URL: http://localhost:3000/Movies/1 
+12:01:46.993 INFO  OUTGOING CALL TO URL: http://localhost:3000/Movies/3 
+12:05:45.147 INFO  OUTGOING CALL TO URL: http://localhost:3000/Movies/3 
+12:09:50.857 INFO  OUTGOING CALL TO URL: http://localhost:3000/Movies/50 
+12:10:30.844 INFO  OUTGOING CALL TO URL: http://localhost:3000/Movies?year=2004 
+12:12:19.909 INFO  OUTGOING CALL TO URL: http://localhost:3000/Movies?year=2004 
+13:20:44.510 INFO  OUTGOING CALL TO URL: http://localhost:3000/Movies/ 
+13:21:02.082 INFO  OUTGOING CALL TO URL: http://localhost:3000/Movies/1 
