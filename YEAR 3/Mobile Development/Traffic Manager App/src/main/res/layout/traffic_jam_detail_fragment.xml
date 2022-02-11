@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background2" >
+
+    <TextView
+        android:id="@+id/txtJamTitle"
+        android:layout_width="325dp"
+        android:layout_height="46dp"
+        android:textAlignment="center"
+        android:textColor="#0096ff"
+        android:fontFamily="sans-serif-medium"
+        android:layout_marginTop="40dp"
+        android:text="@string/traffic_jam_details"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/cityJamInfo"
+        android:layout_width="168dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="72dp"
+        android:drawableStart="@drawable/ic_baseline_location_city_white"
+        android:drawablePadding="16dp"
+        android:minWidth="100dp"
+        android:minHeight="48dp"
+        android:paddingTop="3dp"
+        android:text="City:"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.176"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtJamTitle" />
+
+    <TextView
+        android:id="@+id/txtJamCity"
+        android:layout_width="207dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="12dp"
+        android:hint="@string/no_city_specified"
+        android:minWidth="100dp"
+        android:minHeight="48dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.21"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cityJamInfo" />
+
+    <TextView
+        android:id="@+id/AddressJamInfo"
+        android:layout_width="168dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="12dp"
+        android:drawableStart="@drawable/ic_baseline_house_white"
+        android:drawablePadding="16dp"
+        android:minWidth="100dp"
+        android:minHeight="48dp"
+        android:paddingTop="3dp"
+        android:text="Address:"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.176"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtJamCity" />
+
+    <TextView
+        android:id="@+id/txtJamAddress"
+        android:layout_width="207dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="12dp"
+        android:hint="@string/no_address_specified"
+        android:minWidth="100dp"
+        android:minHeight="48dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.21"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AddressJamInfo" />
+
+    <TextView
+        android:id="@+id/DistanceJamInfo"
+        android:layout_width="168dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="12dp"
+        android:drawableStart="@drawable/ic_baseline_lens_blur_white"
+        android:drawablePadding="16dp"
+        android:minWidth="100dp"
+        android:minHeight="48dp"
+        android:paddingTop="3dp"
+        android:text="Distance:"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.176"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtJamAddress" />
+
+    <TextView
+        android:id="@+id/txtJamDistance"
+        android:layout_width="207dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="12dp"
+        android:hint="@string/no_distance_specified"
+        android:minWidth="100dp"
+        android:minHeight="48dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.21"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DistanceJamInfo" />
+
+    <TextView
+        android:id="@+id/LanesJamInfo"
+        android:layout_width="168dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="12dp"
+        android:drawableStart="@drawable/ic_baseline_block_white"
+        android:drawablePadding="16dp"
+        android:minWidth="100dp"
+        android:minHeight="48dp"
+        android:paddingTop="3dp"
+        android:text="Blocked Lanes:"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.176"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtJamDistance" />
+
+    <TextView
+        android:id="@+id/txtJamBlockedLanes"
+        android:layout_width="207dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="12dp"
+        android:hint="@string/not_specified"
+        android:minWidth="100dp"
+        android:minHeight="48dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.21"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LanesJamInfo" />
+
+    <TextView
+        android:id="@+id/EmergencyServicesInfo"
+        android:layout_width="250dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="12dp"
+        android:drawableStart="@drawable/ic_baseline_healing_24"
+        android:drawablePadding="16dp"
+        android:minWidth="100dp"
+        android:minHeight="48dp"
+        android:paddingTop="3dp"
+        android:text="Emergency Services Arrived:"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.267"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtJamBlockedLanes" />
+
+    <TextView
+        android:id="@+id/txtJamEmergencyServices"
+        android:layout_width="207dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="12dp"
+        android:hint="@string/not_specified"
+        android:minWidth="100dp"
+        android:minHeight="48dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.21"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EmergencyServicesInfo" />
+
+    <TextView
+        android:id="@+id/ReasonJamInfo"
+        android:layout_width="250dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="12dp"
+        android:drawableStart="@drawable/ic_baseline_question_mark_white"
+        android:drawablePadding="16dp"
+        android:minWidth="100dp"
+        android:minHeight="48dp"
+        android:paddingTop="3dp"
+        android:text="Reason:"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.26"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtJamEmergencyServices" />
+
+    <TextView
+        android:id="@+id/txtJamReason"
+        android:layout_width="207dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="12dp"
+        android:hint="@string/no_reason_specified"
+        android:minWidth="100dp"
+        android:minHeight="48dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.205"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ReasonJamInfo" />
+
+    <TextView
+        android:id="@+id/StillActiveJamInfo"
+        android:layout_width="250dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="12dp"
+        android:drawableStart="@drawable/ic_baseline_play_circle_white"
+        android:drawablePadding="16dp"
+        android:minWidth="100dp"
+        android:minHeight="48dp"
+        android:paddingTop="3dp"
+        android:text="Jam Still Active:"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.267"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtJamReason"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/txtJamStillActive"
+        android:layout_width="207dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="12dp"
+        android:hint="@string/not_specified"
+        android:minWidth="100dp"
+        android:minHeight="48dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.21"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/StillActiveJamInfo"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/txtJamStartTime"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="40dp"
+        android:hint="@string/start_time_hint"
+        android:minWidth="100dp"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.138"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtJamStillActive"
+        android:visibility="gone"/>
+
+
+    <!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:orientation="vertical">-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/txtJamTitle"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="32dp"-->
+<!--            android:text="Traffic Jam"-->
+<!--            android:textSize="30sp"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintHorizontal_bias="0.498"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/txtJamCity"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="32dp"-->
+<!--            android:hint="@string/city_hint"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintHorizontal_bias="0.183"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/txtJamTitle" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/txtJamAddress"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="28dp"-->
+<!--            android:hint="@string/address_hint"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintHorizontal_bias="0.194"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/txtJamCity" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/txtJamDistance"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="28dp"-->
+<!--            android:hint="@string/distance_hint"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintHorizontal_bias="0.2"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/txtJamAddress" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/txtJamReason"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="28dp"-->
+<!--            android:hint="@string/reason_hint"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintHorizontal_bias="0.195"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/txtJamDistance" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/txtJamEmergencyServices"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="28dp"-->
+<!--            android:hint="@string/emergency_services_arrived_hint"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintHorizontal_bias="0.305"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/txtJamReason" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/txtJamStartTime"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="28dp"-->
+<!--            android:hint="@string/start_time_hint"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintHorizontal_bias="0.206"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/txtJamEmergencyServices" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/txtJamStillActive"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="28dp"-->
+<!--            android:hint="@string/jam_still_active_hint"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintHorizontal_bias="0.227"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/txtJamStartTime" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/txtJamBlockedLanes"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="28dp"-->
+<!--            android:hint="@string/amount_of_blocked_lanes_hint"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintHorizontal_bias="0.288"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/txtJamStillActive" />-->
+
+<!--    </LinearLayout>-->
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

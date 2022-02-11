@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background2"
+        tools:context=".EditTrafficJamActivity">
+
+        <TextView
+            android:id="@+id/txtJamTitle2"
+            android:layout_width="325dp"
+            android:layout_height="46dp"
+            android:textAlignment="center"
+            android:textColor="#0096ff"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginTop="40dp"
+            android:text="@string/add_new_traffic_jam"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/txtJamCity"
+            android:layout_width="295dp"
+            android:layout_height="43dp"
+            android:layout_marginTop="92dp"
+            android:background="@drawable/custom_input"
+            android:drawableStart="@drawable/ic_baseline_location_city_24"
+            android:drawablePadding="16dp"
+            android:hint="@string/city_hint"
+            android:minWidth="100dp"
+            android:minHeight="48dp"
+            android:paddingStart="5pt"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtJamTitle2" />
+
+        <EditText
+            android:id="@+id/txtJamAddress"
+            android:layout_width="295dp"
+            android:layout_height="43dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/custom_input"
+            android:drawableStart="@drawable/ic_baseline_house_24"
+            android:drawablePadding="16dp"
+            android:hint="@string/address_hint"
+            android:minWidth="100dp"
+            android:minHeight="48dp"
+            android:paddingStart="5pt"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtJamCity"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/btnLocation"
+            android:layout_width="180dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="12dp"
+            android:text="@string/find_location"
+            android:backgroundTint="#0873BF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.744"
+            app:layout_constraintStart_toStartOf="parent"
+            android:bottomRightRadius="10dp"
+            android:bottomLeftRadius="10dp"
+            android:topLeftRadius="100dp"
+            android:textColor="@color/white"
+            android:topRightRadius="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/txtJamAddress" />
+
+        <EditText
+            android:id="@+id/txtJamDistance"
+            android:layout_width="295dp"
+            android:layout_height="43dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/custom_input"
+            android:drawableStart="@drawable/ic_baseline_blur_on_24"
+            android:drawablePadding="16dp"
+            android:hint="@string/distance_hint"
+            android:minWidth="100dp"
+            android:minHeight="48dp"
+            android:paddingStart="5pt"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnLocation" />
+
+        <EditText
+            android:id="@+id/txtJamBlockedLanes"
+            android:layout_width="295dp"
+            android:layout_height="43dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/custom_input"
+            android:drawableStart="@drawable/ic_baseline_block_24"
+            android:drawablePadding="16dp"
+            android:hint="@string/amount_of_blocked_lanes_hint"
+            android:minWidth="100dp"
+            android:minHeight="48dp"
+            android:paddingStart="5pt"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtJamDistance"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/txtJamEmergencyServices"
+            android:layout_width="295dp"
+            android:layout_height="43dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/custom_input"
+            android:drawableStart="@drawable/ic_baseline_healing_24"
+            android:drawablePadding="16dp"
+            android:hint="@string/emergency_services_arrived_hint"
+            android:minWidth="100dp"
+            android:minHeight="48dp"
+            android:paddingStart="5pt"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtJamBlockedLanes" />
+
+        <EditText
+            android:id="@+id/txtJamReason"
+            android:layout_width="295dp"
+            android:layout_height="43dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/custom_input"
+            android:drawableStart="@drawable/ic_baseline_question_mark_24"
+            android:drawablePadding="16dp"
+            android:hint="@string/reason_hint"
+            android:minWidth="100dp"
+            android:minHeight="48dp"
+            android:paddingStart="5pt"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtJamEmergencyServices" />
+
+        <EditText
+            android:id="@+id/txtJamStillActive"
+            android:layout_width="295dp"
+            android:layout_height="43dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/custom_input"
+            android:drawableStart="@drawable/ic_baseline_play_circle_filled_24"
+            android:drawablePadding="16dp"
+            android:hint="@string/jam_still_active_hint"
+            android:minWidth="100dp"
+            android:minHeight="48dp"
+            android:paddingStart="5pt"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtJamReason" />
+
+        <EditText
+            android:id="@+id/txtJamStartTime"
+            android:layout_width="295dp"
+            android:layout_height="43dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/custom_input"
+            android:drawableStart="@drawable/ic_baseline_access_time_24"
+            android:drawablePadding="16dp"
+            android:hint="@string/start_time_hint"
+            android:minWidth="100dp"
+            android:minHeight="48dp"
+            android:paddingStart="5pt"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtJamStillActive"
+            app:layout_constraintVertical_bias="0.011"
+            app:layout_goneMarginBottom="50sp" />
+
+        <TextView
+            android:id="@+id/editTextTextPersonName"
+            android:layout_width="295dp"
+            android:layout_height="43dp"
+            android:layout_marginTop="24dp"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtJamTitle" />
+
+        <Button
+            android:id="@+id/txtJamTitle"
+            android:layout_width="208dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#0873BF"
+            android:text="@string/add"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtJamStartTime" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

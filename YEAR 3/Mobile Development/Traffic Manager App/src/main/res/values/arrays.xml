@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="update_frequency">
+        <item name="1">Daily</item>
+        <item name="7">Weekly</item>
+        <item name="30">Monthly</item>
+        <item name="0">Never</item>
+    </string-array>
+
+    <string-array name="update_frequency_values">
+        <item name="1">1</item>
+        <item name="7">7</item>
+        <item name="30">30</item>
+        <item name="0">0</item>
+    </string-array>
+
+    <string-array name="notification_tone">
+        <item name="1">Beep Once</item>
+        <item name="2">Whistle</item>
+        <item name="3">Twinkle</item>
+        <item name="4">Basic Tone</item>
+        <item name="5">Knock</item>
+        <item name="6">Piano</item>
+        <item name="7">Moonlight</item>
+        <item name="8">Calm</item>
+        <item name="9">Door Bell</item>
+        <item name="0">Off</item>
+    </string-array>
+
+    <string-array name="notification_tone_values">
+        <item name="1">1</item>
+        <item name="2">2</item>
+        <item name="3">3</item>
+        <item name="4">4</item>
+        <item name="5">5</item>
+        <item name="6">6</item>
+        <item name="7">7</item>
+        <item name="8">8</item>
+        <item name="9">9</item>
+        <item name="0">0</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">MobileDevelopment2021CityManager</string>
+    <string name="city_hint">City?</string>
+    <string name="address_hint">Address?</string>
+    <string name="distance_hint">Distance?</string>
+    <string name="reason_hint">Reason?</string>
+    <string name="emergency_services_arrived_hint">Emergency Services Arrived?</string>
+    <string name="start_time_hint">Start Time?</string>
+    <string name="jam_still_active_hint">Jam Still Active?</string>
+    <string name="amount_of_blocked_lanes_hint">Amount Of Blocked Lanes?</string>
+    <string name="save_menu">Save</string>
+    <string name="title_activity_navigation_bar">navigation_bar</string>
+    <string name="title_home">Home</string>
+    <string name="settings_title">Settings</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="hasselt_hint">Hasselt</string>
+    <string name="add_new_traffic_jam">Add New Traffic Jam.</string>
+    <string name="find_location">Find Location</string>
+    <string name="add">Add</string>
+    <string name="traffic_jam_details">Traffic Jam Details.</string>
+    <string name="no_city_specified"><![CDATA[<No City Specified>]]></string>
+    <string name="no_address_specified"><![CDATA[<No Address Specified>]]></string>
+    <string name="no_distance_specified"><![CDATA[<No Distance Specified>]]></string>
+    <string name="not_specified"><![CDATA[<Not Specified>]]></string>
+    <string name="no_reason_specified"><![CDATA[<No Reason Specified>]]></string>
+    <string name="traffic_jams_info">Traffic Jams.</string>
+</resources>

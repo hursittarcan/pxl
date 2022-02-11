@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_list"
+        android:name="com.example.mobiledevelopment2021citymanager.ListFragment"
+        android:label="List"
+        tools:layout="@layout/traffic_jam_list_fragment" />
+
+    <fragment
+        android:id="@+id/navigation_add"
+        android:name="com.example.mobiledevelopment2021citymanager.AddFragment"
+        android:label="Add"
+        tools:layout="@layout/traffic_jam_add_fragment" />
+</navigation>

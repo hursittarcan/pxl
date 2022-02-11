@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="User Settings">
+        <EditTextPreference
+            android:title="Username"
+            android:summary="Set your username"
+            android:key="prefUserName"/>
+
+        <EditTextPreference
+            android:title="Hometown"
+            android:summary="Set your hometown"
+            android:key="prefHometown"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Notifications">
+        <CheckBoxPreference
+            android:title="Allow Notifications"
+            android:key="prefNotifications"
+            android:defaultValue="true" />
+        <ListPreference
+            android:title="Notification Tone"
+            android:key="prefNotificationTone"
+            android:entries="@array/notification_tone"
+            android:entryValues="@array/notification_tone_values"/>
+        <SeekBarPreference
+            android:title="Volume"
+            android:key="prefVolume"
+            android:defaultValue="80"/>
+
+        <CheckBoxPreference
+            android:title="Vibrate"
+            android:key="prefVibrate"
+            android:defaultValue="false" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Update Settings">
+        <CheckBoxPreference
+            android:title="Auto Updates"
+            android:key="prefAutoUpdates"
+            android:defaultValue="false" />
+        <ListPreference
+            android:title="Update Reminder"
+            android:key="prefUpdateReminder"
+            android:entries="@array/update_frequency"
+            android:entryValues="@array/update_frequency_values"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="About">
+        <Preference
+            android:title="About Us"
+            android:key="prefAboutUs"
+            android:summary="We are a team of motivated programmers at PXL. " />
+        <Preference
+            android:title="App Version"
+            android:key="prefAppVersion"
+            android:summary="1.0.2" />
+    </PreferenceCategory>
+
+
+</PreferenceScreen>
