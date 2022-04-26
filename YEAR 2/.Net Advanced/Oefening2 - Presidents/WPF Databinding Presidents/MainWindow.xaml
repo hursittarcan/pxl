@@ -1,0 +1,97 @@
+﻿<Window
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:WPF_Databinding_Presidents"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="WPF_Databinding_Presidents.MainWindow"
+    Title="{Binding}" Height="230" Width="800">
+    <Window.Resources>
+        <LinearGradientBrush x:Key="ListBoxGradient"
+           StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Color="#90000000" Offset="0" />
+            <GradientStop Color="#40000000" Offset="0.005" />
+            <GradientStop Color="#10000000" Offset="0.04" />
+            <GradientStop Color="#20000000" Offset="0.945" />
+            <GradientStop Color="#60FFFFFF" Offset="1" />
+        </LinearGradientBrush>
+        <ControlTemplate x:Key="SpecialListTemplate" TargetType="{x:Type ListBox}" >
+            <Border BorderBrush="Gray"
+                    BorderThickness="1"
+                    CornerRadius="12"
+                    Background="{DynamicResource ListBoxGradient}" >
+                <ScrollViewer VerticalScrollBarVisibility="Disabled" HorizontalScrollBarVisibility="Visible">
+                    <StackPanel IsItemsHost="True" Orientation="Horizontal" HorizontalAlignment="Left" />
+                </ScrollViewer>
+            </Border>
+        </ControlTemplate>
+        <Style x:Key="SpecialListItem" TargetType="{x:Type ListBoxItem}">
+            <Setter Property="MaxHeight"  Value="75" />
+            <Setter Property="MinHeight"  Value="75" />
+            <Setter Property="Opacity"    Value=".75" />
+            <Style.Triggers>
+                <EventTrigger RoutedEvent="Mouse.MouseEnter">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Duration="0:0:0.2" Storyboard.TargetProperty="MaxHeight" To="105" />
+                            <DoubleAnimation Duration="0:0:0.2" Storyboard.TargetProperty="Opacity" To="1.0" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="Mouse.MouseLeave">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Duration="0:0:0.2" Storyboard.TargetProperty="MaxHeight" />
+                            <DoubleAnimation Duration="0:0:0.2" Storyboard.TargetProperty="Opacity" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Style.Triggers>
+        </Style>
+        <local:PresidentList x:Key="Presidents">
+            <local:President ImageUri="Pictures\gw1.jpg" Name="George Washington" />
+            <local:President ImageUri="Pictures\ja2.jpg" Name="John Adams" />
+            <local:President ImageUri="Pictures\tj3.jpg" Name="Thomas Jefferson" />
+            <local:President ImageUri="Pictures\jm4.jpg" Name="James Madison" />
+            <local:President ImageUri="Pictures\jm5.jpg" Name="James Monroe" />
+            <local:President ImageUri="Pictures\ja6.jpg" Name="John Quincy Adams" />
+            <local:President ImageUri="Pictures\aj7.jpg" Name="Andrew Jackson" />
+            <local:President ImageUri="Pictures\mv8.jpg" Name="Martin Van Buren" />
+            <local:President ImageUri="Pictures\wh9.jpg" Name="William H. Harrison" />
+            <local:President ImageUri="Pictures\jt10.jpg" Name="John Tyler" />
+            <local:President ImageUri="Pictures\jp11.jpg" Name="James K. Polk" />
+            <local:President ImageUri="Pictures\zt12.jpg" Name="Zachary Taylor" />
+            <local:President ImageUri="Pictures\mf13.jpg" Name="Millard Fillmore" />
+            <local:President ImageUri="Pictures\fp14.jpg" Name="Franklin Pierce" />
+            <local:President ImageUri="Pictures\jp15.jpg" Name="James Buchanan" />
+            <local:President ImageUri="Pictures\al16.jpg" Name="Abraham Lincoln" />
+            <local:President ImageUri="Pictures\aj17.jpg" Name="Andrew Johnson" />
+            <local:President ImageUri="Pictures\ug18.jpg" Name="Ulysses S. Grant" />
+            <local:President ImageUri="Pictures\rb19.jpg" Name="Rutherford B. Hayes" />
+            <local:President ImageUri="Pictures\jg20.jpg" Name="James Garfield" />
+        </local:PresidentList>
+    </Window.Resources>
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0">
+            <TextBlock FontSize="14" ><Run Text="United States Presidents"/></TextBlock>
+        </StackPanel>
+        <StackPanel Grid.Row="1" >
+            <ListBox Template="{StaticResource SpecialListTemplate}" x:Name="presidentsListBox" 
+                     Margin="10" Height="120"
+                     SelectionChanged="PresidentsListBox_SelectionChanged" 
+                     ItemsSource="{StaticResource Presidents}" 
+                     ItemContainerStyle="{StaticResource SpecialListItem}">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Border VerticalAlignment="Center" HorizontalAlignment="Center" Padding="4" Margin="2" Background="White">
+                            <Image Source="{Binding ImageUri}" />
+                        </Border>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </StackPanel>
+    </Grid>
+</Window>
+

@@ -1,0 +1,12 @@
+C:\Users\Hursit Tarcan\Desktop\GIP SINAN NIET VERWIJDEREN!!!!!!!!!!!!!\Oefening1\StudentData\bin\Debug\StudentData.exe.config
+C:\Users\Hursit Tarcan\Desktop\GIP SINAN NIET VERWIJDEREN!!!!!!!!!!!!!\Oefening1\StudentData\bin\Debug\StudentData.exe
+C:\Users\Hursit Tarcan\Desktop\GIP SINAN NIET VERWIJDEREN!!!!!!!!!!!!!\Oefening1\StudentData\bin\Debug\StudentData.pdb
+C:\Users\Hursit Tarcan\Desktop\GIP SINAN NIET VERWIJDEREN!!!!!!!!!!!!!\Oefening1\StudentData\obj\Debug\StudentData.csprojAssemblyReference.cache
+C:\Users\Hursit Tarcan\Desktop\GIP SINAN NIET VERWIJDEREN!!!!!!!!!!!!!\Oefening1\StudentData\obj\Debug\MainWindow.baml
+C:\Users\Hursit Tarcan\Desktop\GIP SINAN NIET VERWIJDEREN!!!!!!!!!!!!!\Oefening1\StudentData\obj\Debug\MainWindow.g.cs
+C:\Users\Hursit Tarcan\Desktop\GIP SINAN NIET VERWIJDEREN!!!!!!!!!!!!!\Oefening1\StudentData\obj\Debug\App.g.cs
+C:\Users\Hursit Tarcan\Desktop\GIP SINAN NIET VERWIJDEREN!!!!!!!!!!!!!\Oefening1\StudentData\obj\Debug\StudentData_MarkupCompile.cache
+C:\Users\Hursit Tarcan\Desktop\GIP SINAN NIET VERWIJDEREN!!!!!!!!!!!!!\Oefening1\StudentData\obj\Debug\StudentData.g.resources
+C:\Users\Hursit Tarcan\Desktop\GIP SINAN NIET VERWIJDEREN!!!!!!!!!!!!!\Oefening1\StudentData\obj\Debug\StudentData.csproj.CoreCompileInputs.cache
+C:\Users\Hursit Tarcan\Desktop\GIP SINAN NIET VERWIJDEREN!!!!!!!!!!!!!\Oefening1\StudentData\obj\Debug\StudentData.exe
+C:\Users\Hursit Tarcan\Desktop\GIP SINAN NIET VERWIJDEREN!!!!!!!!!!!!!\Oefening1\StudentData\obj\Debug\StudentData.pdb
