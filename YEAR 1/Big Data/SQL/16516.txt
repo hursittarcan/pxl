@@ -1,0 +1,11 @@
+create or replace function volgende_vergadering
+return date 
+as 
+    v_datum date; 
+begin
+    v_datum : = next_date(last_day(sysdate), 'monday')
+    if to_char(v_datum, 'ddmm') = '0101' or to_char(v_datum, 'ddmm') = '0105' then 
+       v_datum := v_datum +1; 
+    end if; 
+    return v_datum; 
+end; 

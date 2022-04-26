@@ -1,0 +1,52 @@
+create or replace function sysdate2
+return varchar2
+as 
+  v_tekst	varchar2(10);
+begin 
+  v_tekst := to_char(sysdate, 'day, dd, month yyyy'); 
+  return v_tekst; 
+end;
+
+
+
+ select text from user_source where name = 'SYSDATE2'
+
+-------------------------------------------------------------
+
+create or replace function dagen_einde_maand
+return number
+as 
+  v_dagen	number(3);
+begin
+  v_dagen := last_day(sysdate) - sysdate;
+  return n_dagen;
+end; 
+
+--------------------------------------------------------
+
+create or replace function aantal_dienstjaren
+(p_date date) 
+return number
+as 
+  v_aantal_dagen	number(3); 
+begin 
+  return trunc(months_between(sysdate, p_date) / 12)
+end;
+
+select aantal_dienstjaren(hire_date), last_name from employees;
+
+---------------------------------------------------------
+
+create or replace function netto
+(p_salaris employees.salary%type)
+return varchar2 
+as 
+begin 
+  return to_char(p_salaris * 0.6, '999,999,999.00' || ' euro'; 
+end;
+
+select netto(salary) from employees;
+-------------------------------------------------------
+
+show errors
+

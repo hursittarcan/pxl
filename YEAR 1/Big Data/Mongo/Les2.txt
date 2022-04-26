@@ -1,0 +1,53 @@
+THEORIE LES 2: 
+----------------------------------------------
+
+Use royalsdb
+Show collections
+Db.royals.find()
+Db.royals.findOne()
+Db.royals.find( { title : 'Prinses' } )
+Db.royals.find( { _id : 3 } )
+Db.royals.find( { married : true } )
+Db.royals.find( { married : true } ).count()
+Db.royals.find().count()
+Db.royals.count()
+Db.royals.find( { title : 'Queen' } ).count()
+Db.royals.find( { title : 'Queen' }, { firstname :1 } )
+Db.royals.find( { title : 'Queen' }, { firstname :1, _id : 0 } )
+Db.royals.find( { title : 'Queen' }, { firstname :0, _id : 0 } )  //1 = true, 0 = false! 
+Db.royals.find().limit(3)
+Db.royals.find( {}, { firstname : 1, _id : 0 } ).limit(3) 
+Db.royals.find( {title : 'Prinses' }, {firstname :0} ).limit(2)
+Db.royals.find( {title : 'Prinses' }, {firstname :1} ).limit(2)
+Db.royals.find( {title : 'Prinses' }, {firstname :1} ).limit(2).skip(1)
+Db.royals.find( ).limit(1).skip(1)
+
+--> 2de 3de gehuwde persoon firstname + title
+Db.royals.find( { married : true }, {firstname :1, title :1, _id :0}).limit(2).skip(1) //Albert, Astrid
+Db.royals.find( { married : true }, {firstname :1, title :1, _id :0}).limit(2).skip(1).sort( { firstname :1} ) //Astrid, Mathide
+
+OEFENINGEN LES 2: 
+----------------------------------------------
+
+1) Use 1TINdb.
+2) Show dbs. 1TINdb is leeg, daarom wordt hij niet getoont.
+3) Db.
+4) Db.createCollection('studentenregatta').
+5) Db.studentenregatta.insert( { _id : '001', team : 'PXL', aantal_likes : 820, teamleden : 9 } ).
+6) Db.studentenregatta.insert( [ { _id : 002, team : 'UCLL', teamleden : 8 }, { _id : 003, team : 'Uhasselt', aantal_likes : 400 } ] ).
+7) Db.studentenregatta.update( { team : 'PXL' },  { $set: { team : 'Hogeschool PXL' } } ).
+8) Db.studentenregatta.update( { team : 'Hogeschool PXL' },  { $set: { supporters : {personeel : 50, studenten : 150 } } } ).
+9) Db.studentenregatta.drop().
+10) Db.films.insert( {naam : 'Iedereen beroemd', jaar : 2000 } ) //Collection word automatisch aangemaakt als je het gewoon schrijft na de 'db.'.
+11) Db.films.update( {naam : 'Iedereen beroemd' }, { $set: { acteurs : ['Josse De Pauw', 'Eva Van Der Gucht', 'Werner De Smedt']} } ).
+12) Db.films.insert( { naam : 'Loft', jaar : 2008, acteurs : [ 'Koen De Bouw', 'Filip Peeters' ], director : 'Erik Van Looy' } ).
+13) Db.films.update( { naam : 'Loft' }, { $push: {acteurs : 'Matthias SChoenaerts' } } ).
+14) Db.films.insert( {naam : 'De Premier', jaar : 2016, acteurs : ['Koen De Bouw', 'Tine Reymer'], director : 'Erik Van Looy'}).
+15) Db.films.updateMany( { director : 'Erik Van Looy' }, { $set : { genre : 'thriller' } } ).                                     
+16) Db.boeken.insert( { _id : 001, auteur : 'Stieg Larsson', boek : [ { titel : 'Mannen die vrouwen haten', jaartal : 2005 }, { titel : 'De vrouw die met vuur speelde', jaartal : '2006' } ] } ).
+17) Db.boeken.insert( { _id : 'A002', auteur : [ 'Wiebe Van Der Zee', 'Bert Van Der Zee' ], boek : [ { titel : 'Succes met Big Data', jaartal : 2016 } ], uitgeverij : 'Van Duuren Media BV' } ).
+18) Db.boeken.update( { _id : 'A001', { $push : { boek : { titel : 'Gerechtigheid', jaartal : 2007 } } } ).
+
+---------------------------------------------------------
+-----Copyright - All Rights Reserved - Hursit Tarcan-----
+---------------------------------------------------------

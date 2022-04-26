@@ -1,0 +1,80 @@
+db.royals.find( { $or: [ { title: "Prinses" }, { title: { $ne: "Prinses" }, children: { $exists: true } } ] } ) 
+
+SUBDOCUMENT =/= Array (je kan wel een array van subdocumenten hebben!) Zie Fabiola! Birth + Death 
+
+----------------------------------------
+
+db.royals.find( { address: { street: "rue du Palais", no: 1, zip: 1000, city: "BXL" } } ) 
+//Dit word weinig gebruikt, alles moet helemaal hetzelfde zijn + zelfde volgorde
+
+db.royals.find( { "address.zip": 1000} ) //Hier moet je wel de aanhalingstekens rond de key zetten --> hier wordt 
+iedereen getoond die ergens in zijn adres zip 1000 heeft staan. 
+
+db.royals.find( { "address.zip": 1000}, {address :1, firstname :1, _id :0 } )
+
+db.royals.find( { "address.zip": 1000}, {"address.street" :1, firstname :1, _id :0 } )
+//Enkel de street van het adres word getoont, wel de aanhalingstekens zetten rond de key
+
+*******************************************
+
+db.royals.find( { "address.city": /^p/i}, { firstname :1, address :1, _id :0 } ) 
+db.royals.find( { "address.city": { $in: [ "BXL", "Laken" ] } }, { firstname :1, address :1, _id :0 } ) 
+
+db.royals.find( { "address.zip": { $gte: 1000, $lte: 2000 } }, { firstname :1, address :1, _id :0 } ) 
+
+db.royals.find( { "address.zip": { $ne: 1000 } } )
+
+---------------------------------------------------
+
+db.royals.find( { firstname: "Boudewijn" }, { life :1, _id :0 } ).pretty()
+db.royals.find( { firstname: "Boudewijn" }, { firstname :1, "life.city" :1, _id :0 } ).pretty()
+db.royals.find( { "address.no": 1, "address.city": "BXL" } ).pretty() 
+
+----------------------------------------------------
+
+ARRAYS: 
+--------------------------------------
+
+db.royals.find { children: [ "Louise", "Nicolas" ] } ) //Deze zoekt letterlijk! 
+db.royals.find { children: "Nicolas" } ) //Deze beter 
+
+db.royals.find { children: { $in: [ "Louise", "Nicolas" ] } } )
+db.royals.find { children: { $in: [ "Louise", "Nico" ] } } )
+
+db.royals.find ( { $and: [ { children: "Louise" }, { children: "Nicolas" } ] } ) 
+//Iemand met een kind louise en nicolas
+db.royals.find ( { $and: [ { children: "Louise" }, { children: "Nicol" } ] } )
+//Nicol is er niet dus niemand word getoond, beide moete true zijn
+
+db.royals.find ( { $all: [ { children: "Louise" }, { children: "Nicolas" } ] } ) 
+//Alle waarden moeten aanwezig zijn, zelfde als hierboven. 
+
+db.royals.find( { children: /^l/i } )
+db.royals.find( { children: { $gte: "N" } } ) //Geen M schrijven want alle namen met M zijn groter dan de char, begin dus bij
+gte: "N"
+
+db.royals.find( { "children.0": "Louise" } )
+//Op de eerste plaats iemand die Louise noemt. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

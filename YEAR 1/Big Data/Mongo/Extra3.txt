@@ -1,0 +1,24 @@
+db.royals.find( { title : "Queen" ,married : true } ).pretty()
+db.royals.find( { title: "Prins", dotation: { $exists: true}}).pretty()
+db.royals.find( {title : 'Prins', dotation : {$gte : 100000, $lte : 500000} }, {firstname : 1, _id : 0} ).sort({firstname : 1}).pretty()
+db.royals.find( { $and: [ {title: "Prins"}, {dotation : { $gte: 100000 , $lte: 500000 } } ] } ).pretty()
+db.royals.find( { title: { $exists: true, $nin: [ "Prins", "Prinses" ] }}).pretty() // Geen $ne gebruiken doet raar bij meerdere dingen! 
+db.royals.find( { $or: [ { married: true }, { RIP: true } ] } ).pretty()
+db.royals.find( { $or: [ { married: true }, { RIP: true } ] }, { firstname :1, _id :0} ).sort({firstname :1})
+db.royals.find( { $or: [ { title: "Queen" }, { firstname: /a/i } ] } )
+db.royals.find( { $or: [ { title: "King" }, { _id: { $lt: 5} } ] } ).sort( {title :1}).pretty()
+db.royals.find( { $or: [ { title: "King" }, { dotation: { $gte: 500000, $lte: 1000000 }} ] }, {firstname :1, _id :0, dotation :1} ).sort( {dotation :-1}).pretty()
+db.royals.find( { title : "Prinses",  $or : [ { firstname : "Astrid"}, { lastname: "Coombs" } ] }).pretty()
+db.royals.find( { $or: [ { title: "Prinses" }, { married: true, title: "Prins" }]})
+db.royals.find( { $or: [ { title: "Prinses" }, { married: true, title: "Prins" }]}, { firstname:1 }).sort({firstname:1})
+db.royals.find( { $or: [ { title: "Prinses", married : { $ne: true } }, { dotation : { $exists: true } } ] } ).pretty()
+
+db.royals.find( { $or: [ { married : true, _id: { $lt: 4 }}, { RIP : true, _id: { $gte: 5} } ] } )
+OF
+db.royals.find( { $or: [ { married : { $exists: true}, _id: { $lt: 4 }}, { RIP : { $exists: true }, _id: { $gte: 5} } ] } )
+
+db.royals.find( { $or: [ { children: {$exists: true}, dotation: {$gt: 500000} }, { birthday : {$gt:  new Date("1940-01-01")} } ] }, { firstname :1, _id :0, birthday :1, dotation :1, children :1 } ).sort( { firstname :-1}).pretty()
+
+db.royals.find( { title: {$exists: true, $ne: "King" }, $or : [ { lastname : /$Van/i }, { children : { $exists : true } } ] }
+db.royals.find( { title: {$exists: true, $ne: "King" }, $or : [ { lastname : /^Van/i }, { children : { $exists : true } } ] }, { firstname :1, _id :0, lastname :1}).limit(2).skip(1).pretty()
+

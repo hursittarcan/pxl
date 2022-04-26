@@ -1,0 +1,50 @@
+THEORIE + EXTRA OEFENINGEN LES 3: 
+----------------------------------------------
+
+db.royals.findOne()
+Db.royals.find().skip(1).limit(1)
+Db.royals.find().count() //Kan ook zonder de find().
+Db.royals.find( { title : 'Prinses' } ).count()
+Db.royals.find( { title : 'Prinses' } ).sort( { firstname :1 } ).pretty()
+Db.royals.find( { title : 'Prinses' } ).sort( { firstname :1 } ).pretty().skip(1).limit(1)
+Db.royals.find( {}, { title:1, firstname:1, _id:0 }).sort( { title:1, firstname:1})
+Db.royals.find( { lastname : 'Van België' }, { _id : 0, lastname : 0}).skip(1).limit(2).sort( { title :1 }).pretty()
+Db.royals.find( { _id : { $lt : 5 } } )
+Lt --> less then 
+Lte --> less then + equals
+Gt --> groter dan
+Gte --> + equals
+Db.royals.find( { _id : { $gt : "A" } } ).pretty() //Alfanumeriek alleen
+Db.royals.find( { firstname : { $gte : "M" } } ).pretty()
+Db.royals.find( { birthday : { $gte : ISODate("2001-01-01T00:00:00Z") } } ).pretty()
+Db.royals.find( { birthday : { $gt : new Date("2001-01-01") } } ).pretty()
+Db.royals.find( { firstname : { $gte : "D" } }, {firstname :1, title:1, _id:0} ).skip(3).limit(2).sort( { firstname :1 }).pretty()
+Db.royals.find( { title : {$ne : 'Prinses'}}).pretty()
+Db.royals.find( { lastname : {$exists : true} }).pretty()
+Db.royals.find( { life : {$exists : true} }).pretty()
+Db.royals.find( { life : {$exists : false} }).pretty()
+Db.royals.find( { title : {$in : ['Prins', 'Prinses']} }).pretty()
+Db.royals.find( { title : {$nin : ['Prins', 'Prinses']} }).pretty()
+Db.royals.find( { firstname: /la/ })
+Db.royals.find( { firstname: /la/i }, { firstname :1 })
+
+> Db.royals.find( { firstname: /^la/i }, { firstname :1 })
+{ "_id" : 4, "firstname" : "Laurent" }
+> Db.royals.find( { firstname: /la$/i }, { firstname :1 })
+{ "_id" : 6, "firstname" : "Fabiola" }
+{ "_id" : 7, "firstname" : "Paola" }
+
+Db.royals.find( {firstname : { $in : [ /^C/ , /^L/ ] }} )
+Db.royals.find( { $and : [ { title : "Prinses" } , { married : true } ] } )
+Db.royals.find( { title : "Prinses"  ,  married : true  } ).pretty() // Hetzelfde als hierboven, je moet ze wel allebei kennen! 
+Db.royals.find( { RIP : true, origin : {$exists : true}}).pretty()
+Db.royals.find( { married :true, lastname : { $gte : 'V' } } )
+Db.royals.find( { _id : {$gte : 3, $lte : 6 } } ) //Allebei in de zelfde accolade doen, in andere accolade gaat dit niet! 
+Db.royals.find( { firstname : {  $gte : 'L', $ne: 'Mathilde' } } )
+Db.royals.find( { $and : [ {firstname : {$gte : "L"} }, {firstname : /la$/ } ] }, {firstname : 1, _id : 0} ).sort( {firstname : 1} ).pretty()
+!! NU NOG NIET KENNEN MAAR KORTE VERSIE --> db.royals.find( firstname : { $regex; /la$/, $gte : "L" } } , { firstname :1, _id:0 } ).sort({firstname :1 })
+Db.royals.find( { title : "Prinses", birthday : {$gte : new Date("2001-04-01"), $lte : new Date("2001-11-01")} }, { firstname :1, birthday :1, _id :0 } )
+
+---------------------------------------------------------
+-----Copyright - All Rights Reserved - Hursit Tarcan-----
+---------------------------------------------------------

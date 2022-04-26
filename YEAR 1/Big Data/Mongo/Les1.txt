@@ -1,0 +1,89 @@
+THEORIE LES 1: 
+----------------------------------------------
+
+Show dbs --> Laat alle databases zien.
+Use x (bv. pruldb) --> Gebruikt database x, als deze db nog niet bestaat word hij aangemaakt. 
+Db --> Laat huidige db zien, waarin we werken. 
+Db.dropDatabase() --> Dropt de database. Respons als het gelukt is: { "ok" : 1 }. 
+Db.createCollection('royals') --> Maakt een collectie aan in de huidige db met de naam 'royals'.
+Show collections --> Laat alle collections zien in db x.
+Db.royals.insert() --> Iets invoegen in collection royals. 
+Db.royals.find() --> Iets zoeken in collection royals. 
+Db.royals.find().pretty() --> Geeft een mooiere structuur aan je zoekopdracht, verder niks extra. 
+Db.royals.save --> Op deze manier kan data overschreven worden. 
+Db.royals.update --> Extra info toevoegen, bij een object. 
+Db.royals.updateMany --> Extra info toevoegen, bij meerdere objecten. 
+Db.royals.remove() --> Verwijderen van een object. 
+db.royals.remove( {} ) --> Alles verwijderen in de collection. 
+ 
+OEFENINGEN EXTRA: 
+----------------------------------------------
+
+Use tinh
+Db
+Db.createCollection('royals')
+Show collections 
+Db.royals.drop() 
+
+Db.createCollection('royals')
+Db.royals.insert( { firstname : 'Filip', lastname : 'Van Belgie', title : 'King' } ) 
+Db.royals.find() 
+Db.royals.insert( { firstname : 'Mathilde', title : 'Queen', married: true } ) 
+Db.royals.find() 
+Db.royals.insert( { _id : 1, firstname : 'Albert', lastname : 'Van Belgie', title : 'Albert', married: true } ) 
+Db.royals.find() 
+Db.royals.insert( { firstname : 'Albert', lastname : 'Van Belgie', title : 'Albert', married: true } ) 
+Db.royals.find() 
+Db.royals.insert( { _id : 3, firstname : 'Elisabeth', title : 'Princess', birthday : new Date("2001-10-25") } ) 
+Db.royals.find() 
+Db.royals.insert( { firstname : 'Lorenz', lastname : 'Van Oostenrijk', created: new Date() } ) 
+Db.royals.find() 
+Db.royals.insert( { firstname : 'Lorenz', lastname : 'Van Oostenrijk', created: Date() } ) 
+Db.royals.find() 
+Db.royals.insert( { _id : 2, firstname : 'Astrid', title: 'Princess', married : true, address : { street : "rue du palais", no : 1, zip : 1000, city : "BXL" } } ) 
+Db.royals.find() 
+Db.royals.find().pretty()
+
+Db.royals.insert( { _id : 4, firstname : 'Laurent', title: 'Prince', children : ['Louise', 'Nicolas'], dotation : 320000 } ) 
+Db.royals.find() 
+
+!!Zelfde id = error bij insert, met save kan je wel data overschrijven!!
+
+Db.royals.insert( [ { _id : 5, firstname : 'Boudewijn', RIP: true}, { _id : 6, firstname : 'Fabiola', origin : 'Spanje', RIP : true } ] )
+Db.royals.find() 
+
+!!ANDERE MANIER OM IN TE GEVEN!!
+Db.royals.insert( [
+... { _id : 5, 
+... firstname : "Boudewijn", 
+
+Db.royals.insert( { _id : 7, firstname : 'Paula', title : 'Queen', address : [ { street : "rue du palais", no : 1, zip: 1000, city : 'BXL' }, {street : "via panoramica", no : 1, city : "Prato" } ] } ) 
+Db.royals.find().pretty()
+
+Db.royals.save( { _id : 8, firstname : 'Claire', title : 'Princess' } ) 
+Db.royals.save( { _id : 8, firstname : 'Clair', title : 'Princess' } ) 
+Db.royals.save( { _id : 8, firstname : 'Claire', title : 'Princess' } ) 
+
+Db.royals.insert( { "_id" : ObjectId(xxx), firstname : 'Mathilde', title : 'Queen', married: true, created : new Date() } )
+
+Db.royals.update ( { _id : 8 }, { lastname : 'Coombs' } )
+Db.royals.update ( { _id : 8 }, { $set: {firstname: 'Claire', title : 'Princess'} } )
+
+db.royals.update ( { firstname : 'Albert' }, { $set: { dotation : 961 000 } } ) //Alleen een van de twee Alberts word aangepast
+db.royals.update ( { firstname : 'Albert' }, { $set: { dotation : 961 000 }, { multi : true } ) //Of deze voor meerdere aan te passen! 
+db.royals.updateMany ( { firstname : 'Albert' }, { $set: { dotation : 961 000 } } ) //Of deze om meerdere aan te passen! 
+
+db.royals.updateMany ( { title : 'Prince'}, { $set: {title: 'Prins' } } )
+
+db.royals.update ( { firstname : 'Filip' }, {$set: { dotation : 12000000, children : ['Elisabeth', 'gabriel'] } } ) 
+db.royals.updateMany( {}, $set: {nationality: 'Belgische nationaliteit'}} ) 
+
+db.royals.update( { firstname : 'Filip'}, { $push: {children: 'Eleonore' } } ) 
+db.royals.remove( {firstname : 'Albert'})
+db.royals.remove( {title : 'Princess'}, 1)
+db.royals.remove( {} ) //Verwijderd alles
+
+---------------------------------------------------------
+-----Copyright - All Rights Reserved - Hursit Tarcan-----
+---------------------------------------------------------
+ 

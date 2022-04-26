@@ -1,0 +1,10 @@
+OEFENINGEN 
+-----------------------------
+
+db.movieDetails.find( {}, { title :1, released :1, _id :0 } ) 
+//Typ 'it' voor meer. 
+
+db.movieDetails.find( {}, { title :1, countries :1, director :1, _id :0 } )
+//Nee, dit kan je niet aanpassen
+
+db.movieDetails.find( {}, { title :1, genres :1, _id :0 } ).sort( { genres :1 } ).limit(82)
