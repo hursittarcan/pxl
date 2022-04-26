@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zoek de fouten</title>
+</head>
+<body>
+<output id="output"></output>
+<script>
+    functieMetFouten();
+
+    function functieMetFouten() {
+        let teller = 0;
+        let boodschap = "teller heeft waarde: ";
+        boodschap += teller + "<br/>";
+        teller = teller + 10;
+        if (teller > 5) {
+            boodschap += "<b>Afgelopen</b>, met waarde: " + teller;
+            document.getElementById("output").innerHTML = boodschap;
+        }
+    }
+</script>
+</body>
+</html>

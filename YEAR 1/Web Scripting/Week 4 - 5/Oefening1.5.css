@@ -1,0 +1,64 @@
+body {
+    background-image: url("Assets/Oefening1.5achtergrond.jpg");
+    color: white;
+}
+
+#text1 {
+    width: 300px;
+    height: 50px;
+    margin-left: 450px;
+    margin-top: 300px;
+    border-radius: 10px;
+    border-color: black;
+    background-image: url("Assets/Oefening1.5achtergrond.jpg");
+    color: white;
+    font-size: 25px;
+}
+
+#text2 {
+    width: 300px;
+    height: 50px;
+    border-radius: 10px;
+    border-color: black;
+    background-image: url("Assets/Oefening1.5achtergrond.jpg");
+    color: white;
+    font-size: 25px;
+}
+
+#result_form {
+    width: 300px;
+    height: 50px;
+    border-radius: 10px;
+    border-color: black;
+    background-image: url("Assets/Oefening1.5achtergrond.jpg");
+    color: white;
+    font-size: 25px;
+    margin-left: 640px;
+}
+
+#but1 {
+    margin-left: 1120px;
+    margin-top: -300px;
+}
+p {
+    display: inline;
+    font-size: 30px;
+    margin-left: 10px;
+    margin-right: 7px;
+    color: black;
+    font-family: Arial, serif;
+}
+
+button {
+    display: block;
+    margin-left: 730px;
+    margin-top: 25px;
+    height: 40px;
+    width: 100px;
+    border-radius: 10px;
+    border-color: black;
+    background-image: url("Assets/Oefening1.5achtergrond.jpg");
+    color: white;
+    font-size: 17px;
+}
+

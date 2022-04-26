@@ -1,0 +1,59 @@
+body {
+    background-image: url("Assets/einstein.jpg");
+    background-size: 1550px 770px;
+}
+
+label {
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    border: solid white;
+    border-radius: 10px;
+    display: inline-block;
+    background-color: black;
+
+}
+
+#label1 {
+    margin-top: 80px;
+    margin-left: 40px;
+}
+
+#product {
+    border-radius: 10px;
+    border: solid black;
+    font-size: 40px;
+    width: 250px;
+    margin-right: 20px;
+}
+
+#aantal {
+    border-radius: 10px;
+    border: solid black;
+    font-size: 40px;
+    width: 250px;
+    margin-right: 20px;
+}
+
+#submit {
+    color: white;
+    background-color: black;
+    border-radius: 10px;
+    border: solid white;
+    font-size: 40px;
+    width: 250px;
+    margin-right: 10px;
+}
+
+#submit:hover {
+    background-color: white;
+    color: black;
+    border-color: black;
+    cursor: pointer;
+}
+
+ul {
+    color: white;
+    margin-left: 600px;
+    margin-top: 280px;
+}

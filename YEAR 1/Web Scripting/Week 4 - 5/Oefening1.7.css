@@ -1,0 +1,53 @@
+body {
+    background-image: url("Assets/einstein.jpg");
+    background-size: 1000px 700px;
+    background-repeat: no-repeat;
+    background-color: black;
+}
+
+label {
+    color: white;
+    font-family: Arial, serif;
+    font-size: 25px;
+    font-weight: bold;
+    margin-left: 500px;
+    margin-top: 120px;
+    display: block;
+}
+
+#getal1 {
+    margin-left: 500px;
+    margin-top: 10px;
+    width: 350px;
+    border-radius: 10px;
+    border-color: black;
+    height: 20px;
+}
+
+button {
+    margin-left: 500px;
+    margin-top: 20px;
+    border-radius: 10px;
+    color: white;
+    background-color: black;
+    height: 30px;
+    font-weight: bold;
+    font-family: Arial, serif;
+}
+
+#result {
+    display: block;
+    margin-left: 420px;
+    margin-top: 140px;
+    border-radius: 10px;
+    height: 30px;
+    width: 500px;
+    font-family: Arial, serif;
+    font-size: 15px;
+}
+
+#ref {
+    display: block;
+    margin-left: 845px;
+    margin-top: -90px;
+}

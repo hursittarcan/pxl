@@ -1,0 +1,34 @@
+body {
+    background-image: url("Assets/Oefening1.5achtergrond.jpg");
+    color: white;
+    font-family: Arial, serif;
+}
+
+label {
+    margin-left: 20px;
+    display: inline-block;
+    width: 150px;
+}
+
+#naam1 {
+    margin-top: 20px;
+    width: 100px;
+    border-radius: 10px;
+}
+
+#naam2 {
+    margin-top: 8px;
+    width: 100px;
+    border-radius: 10px;
+}
+
+#result {
+    border-radius: 10px;
+}
+
+button {
+    margin-top: 10px;
+    margin-left: 20px;
+    width: 150px;
+    border-radius: 10px;
+}
