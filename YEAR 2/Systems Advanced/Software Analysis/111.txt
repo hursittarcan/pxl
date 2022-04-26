@@ -1,0 +1,30 @@
+      
+        STAKEHOLDER              BELANG            BIJDRAGE
+ ______________________________ __________ _________________________
+|Salamander (developper)       |Zeer hoog |Website maken            |
+|Salamander (sales)            |Zeer hoog |Website promoten         |
+|(Medewerkers)                 |Hoog      |Klanten helpen/service   |
+|Garages/Eigenaar garage       |Hoog      |Belangrijke klant        |
+|Website garage                |Matig     |Word gekoppelt met andere|
+|Investeerders/Aandeelhouders  |Laag      |Geld geven               |
+|Overheid                      |Laag      |Carpas etc.              |
+|Scholen (stages)              |Laag      |Stages                   |
+|Concurrenten                  |Laag      |Competitie -> Vooruitgang|
+|______________________________|__________|_________________________| 
+
+ ___________________________________________________________
+|Priority, use case, annotation, supporting material, source|
+|___________________________________________________________|
+
+                              VOLAIRE KAART
+ ______________________________________________________________________
+|Requirement#: Abonnement afzeggen                                     |
+|Requerment Type: Functional requerment                                |
+|Description: Klant kan het abonnement afzeggen.                       |
+|Rationale: Klanten moeten de mogelijkheid hebben om een abonnement af |
+|           te zeggen, wanneer ze de pagina niet meer willen gebruiken.|
+|Fit Criterion: Maak een account af en zeg het abonnement op.          |
+|______________________________________________________________________|
+
+
+
