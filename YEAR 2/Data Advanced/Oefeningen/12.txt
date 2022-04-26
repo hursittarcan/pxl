@@ -1,0 +1,32 @@
+DATA ADVANCED LES 1: 
+----------------------------------
+
+OEFENING 2: 
+Fact(42) / (fact(6) * fact(36)) = 5245786 (Combinatie) 
+
+OEFENING : 
+Fact(6) = 720 (Permutatie) 
+Fact(6) / fact(3) = 120 (Variatie) 
+Fact(6) / (fact(2) * fact(4)) = 15 (Combinatie) 
+
+OEFENING 6: 
+Fact(26) / fact(20) = 165765600 (Variatie) 
+
+OEFENING 8: 
+Fact(2) * (26 ** 3) * (10 ** 3) = 35152000
+
+OEFENING 10: 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
