@@ -1,0 +1,21 @@
+# Disk DescriptorFile
+version=1
+encoding="windows-1252"
+CID=09c9b791
+parentCID=ffffffff
+createType="twoGbMaxExtentSparse"
+
+# Extent description
+RW 8323072 SPARSE "Ubuntu Desktop-0-s001.vmdk"
+RW 2162688 SPARSE "Ubuntu Desktop-0-s002.vmdk"
+
+# The Disk Data Base 
+#DDB
+
+ddb.adapterType = "lsilogic"
+ddb.geometry.cylinders = "652"
+ddb.geometry.heads = "255"
+ddb.geometry.sectors = "63"
+ddb.longContentID = "ca427ca2ac701dae20b88a1509c9b791"
+ddb.uuid = "60 00 C2 94 b2 0b fe 3b-8c 39 ee 1e 79 e4 4c 96"
+ddb.virtualHWVersion = "14"
